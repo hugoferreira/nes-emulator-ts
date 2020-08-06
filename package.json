@@ -1,0 +1,30 @@
+{
+    "name": "ts-nes-emulator",
+    "version": "1.0.0",
+    "description": "TypeScript NES Emulator",
+    "author": "Hugo Sereno",
+    "license": "ISC",
+    "@std/esm": "cjs",
+    "main": "main.js",
+    "dependencies": {
+        "colors": "^1.4.0"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.12",
+        "@types/colors": "^1.2.1",
+        "@types/mocha": "^8.0.1",
+        "@types/node": "^14.0.27",
+        "chai": "^4.2.0",
+        "fast-check": "^2.0.0",
+        "mocha": "^8.1.1",
+        "npm": "^6.14.7",
+        "ts-node": "^8.10.2",
+        "typescript": "^3.9.7"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "mocha -r ts-node/register test/**/*.test.ts",
+        "console": "npm run build; node build/6502/main.js",
+        "nes": "npm run build; node build/nes.js"
+    }
+}
